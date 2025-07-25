@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylegeneral.css') }}">
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Crear cuenta</h2>
+    <form method="POST" action="/register_processing">
+      <input type="text" name="username" placeholder="Nombre de usuario" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" required minlength="5" pattern="^(?=.*[!@#$%^&*(),.?\:{}|>]).{5,}$" title="Debe tener al menos 5 caracteres y 1 carácter especial">
+      <input type="password" name="confirm_password" placeholder="Repetir la contraseña" required>
+      <button type="submit">Registrarse</button>
+    </form>
+    <div class="footer">
+      ¿Ya tienes cuenta? <a href="/login">Inicia sesión</a>
+    </div>
+  </div>
+
+</body>
+</html>

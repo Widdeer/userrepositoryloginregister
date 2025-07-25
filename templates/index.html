@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bienvenido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylewelcome.css') }}">
+</head>
+<body>
+
+  <div class="welcome-container">
+    <h1>Elije</h1>
+    <div class="button-container">
+      <a href="/login" class="button">Iniciar sesión</a>
+      <div class="separator">o</div>
+      <a href="/register" class="button">Registrarse</a>
+    </div>
+  </div>
+
+</body>
+</html>
